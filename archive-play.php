@@ -15,10 +15,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
+				<h1>Play</h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -29,9 +26,9 @@ get_header(); ?>
 				<?php 
 				if ( has_post_thumbnail() ) { ?>
 					<figure class="excerpt">
+					<figcaption><?php the_title(); ?></figcaption>
 					<a href="<?php echo get_permalink(); ?>">
 					<?php echo the_post_thumbnail(); ?>
-					<figcaption><?php the_title(); ?></figcaption>
 					</a>
 					</figure>
 				<?php }
